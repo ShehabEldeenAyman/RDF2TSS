@@ -42,7 +42,7 @@ The script performs the following steps:
 Run the script via command line:
 
 ```bash
-python RDF2TSS.py -i input_data.ttl -o output_tss.ttl
+python RDF2TSS.py -i sample.ttl -o output_tss.ttl
 ```
 
 * `-i / --input`: Path to the input Turtle RDF file containing sensor observations.
