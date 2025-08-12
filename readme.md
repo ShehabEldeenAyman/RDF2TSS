@@ -69,6 +69,4 @@ The output RDF graph contains:
 * The JSON-LD context for the time series points is prepared but currently commented out to be added later at a higher level.
 * The `tss` namespace refers to a custom vocabulary for time series snippets.
 
----
 
-If you'd like, I can help you format or expand this documentation further!
