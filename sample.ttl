@@ -1,0 +1,240 @@
+@prefix sosa:   <http://www.w3.org/ns/sosa/> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+@prefix ex:     <https://example.org/> .
+@prefix sensor: <https://example.org/sensor/> .
+@prefix prop:   <https://example.org/observedProperty/> .
+
+
+
+
+<https://example.org/0>
+  a sosa:Observation ;
+  sosa:madeBySensor <temp_sensor_1> ;
+  sosa:hasSimpleResult "5.4"^^xsd:double ;
+  sosa:observedProperty <temperature> ;
+  sosa:resultTime "2026-01-01T06:00:00Z"^^xsd:dateTime .
+
+<https://example.org/1>
+  a sosa:Observation ;
+  sosa:madeBySensor <temp_sensor_1> ;
+  sosa:hasSimpleResult "5.2"^^xsd:double ;
+  sosa:observedProperty <temperature> ;
+  sosa:resultTime "2026-01-01T06:59:59Z"^^xsd:dateTime .
+
+<https://example.org/2>
+  a sosa:Observation ;
+  sosa:madeBySensor <temp_sensor_1> ;
+  sosa:hasSimpleResult "5.2"^^xsd:double ;
+  sosa:observedProperty <temperature> ;
+  sosa:resultTime "2026-01-01T08:00:02Z"^^xsd:dateTime .
+
+<https://example.org/3>
+  a sosa:Observation ;
+  sosa:madeBySensor <temp_sensor_1> ;
+  sosa:hasSimpleResult "6.1"^^xsd:double ;
+  sosa:observedProperty <temperature> ;
+  sosa:resultTime "2026-01-01T09:00:00Z"^^xsd:dateTime .
+
+<https://example.org/4>
+  a sosa:Observation ;
+  sosa:madeBySensor <temp_sensor_1> ;
+  sosa:hasSimpleResult "4.8"^^xsd:double ;
+  sosa:observedProperty <temperature> ;
+  sosa:resultTime "2025-12-31T23:59:59Z"^^xsd:dateTime .
+
+<https://example.org/5>
+  a sosa:Observation ;
+  sosa:madeBySensor <temp_sensor_1> ;
+  sosa:hasSimpleResult "7.3"^^xsd:double ;
+  sosa:observedProperty <temperature> ;
+  sosa:resultTime "2026-02-14T14:30:15Z"^^xsd:dateTime .
+
+<https://example.org/6>
+  a sosa:Observation ;
+  sosa:madeBySensor <humidity_sensor_1> ;
+  sosa:hasSimpleResult "62.1"^^xsd:double ;
+  sosa:observedProperty <humidity> ;
+  sosa:resultTime "2026-01-15T07:45:00Z"^^xsd:dateTime .
+
+<https://example.org/7>
+  a sosa:Observation ;
+  sosa:madeBySensor <temp_sensor_2> ;
+  sosa:hasSimpleResult "12.0"^^xsd:double ;
+  sosa:observedProperty <temperature> ;
+  sosa:resultTime "2025-11-01T05:00:00Z"^^xsd:dateTime .
+
+<https://example.org/8>
+  a sosa:Observation ;
+  sosa:madeBySensor <pressure_sensor_1> ;
+  sosa:hasSimpleResult "1013.25"^^xsd:double ;
+  sosa:observedProperty <airPressure> ;
+  sosa:resultTime "2026-03-10T18:15:30Z"^^xsd:dateTime .
+
+<https://example.org/9>
+  a sosa:Observation ;
+  sosa:madeBySensor <temp_sensor_1> ;
+  sosa:hasSimpleResult "5.9"^^xsd:double ;
+  sosa:observedProperty <temperature> ;
+  sosa:resultTime "2026-01-02T00:00:00Z"^^xsd:dateTime .
+
+<https://example.org/10>
+  a sosa:Observation ;
+  sosa:madeBySensor <humidity_sensor_1> ;
+  sosa:hasSimpleResult "58.7"^^xsd:double ;
+  sosa:observedProperty <humidity> ;
+  sosa:resultTime "2025-10-20T12:00:45Z"^^xsd:dateTime .
+
+<https://example.org/11>
+  a sosa:Observation ;
+  sosa:madeBySensor <temp_sensor_2> ;
+  sosa:hasSimpleResult "9.4"^^xsd:double ;
+  sosa:observedProperty <temperature> ;
+  sosa:resultTime "2026-04-01T09:30:00Z"^^xsd:dateTime .
+
+<https://example.org/12>
+  a sosa:Observation ;
+  sosa:madeBySensor <pressure_sensor_1> ;
+  sosa:hasSimpleResult "1008.50"^^xsd:double ;
+  sosa:observedProperty <airPressure> ;
+  sosa:resultTime "2026-04-01T09:30:01Z"^^xsd:dateTime .
+
+
+<https://example.org/13>
+  a sosa:Observation ;
+  sosa:madeBySensor <light_sensor_1> ;
+  sosa:hasSimpleResult "450.0"^^xsd:double ;
+  sosa:observedProperty <lightIntensity> ;
+  sosa:resultTime "2025-10-05T06:15:30Z"^^xsd:dateTime .
+
+<https://example.org/14>
+  a sosa:Observation ;
+  sosa:madeBySensor <wind_sensor_1> ;
+  sosa:hasSimpleResult "5.8"^^xsd:double ;
+  sosa:observedProperty <windSpeed> ;
+  sosa:resultTime "2025-10-05T06:16:00Z"^^xsd:dateTime .
+
+<https://example.org/15>
+  a sosa:Observation ;
+  sosa:madeBySensor <precipitation_sensor_1> ;
+  sosa:hasSimpleResult "0.0"^^xsd:double ;
+  sosa:observedProperty <precipitation> ;
+  sosa:resultTime "2025-10-05T06:17:45Z"^^xsd:dateTime .
+
+<https://example.org/16>
+  a sosa:Observation ;
+  sosa:madeBySensor <temp_sensor_2> ;
+  sosa:hasSimpleResult "11.7"^^xsd:double ;
+  sosa:observedProperty <temperature> ;
+  sosa:resultTime "2025-11-15T12:00:00Z"^^xsd:dateTime .
+
+<https://example.org/17>
+  a sosa:Observation ;
+  sosa:madeBySensor <humidity_sensor_1> ;
+  sosa:hasSimpleResult "49.3"^^xsd:double ;
+  sosa:observedProperty <humidity> ;
+  sosa:resultTime "2025-11-15T12:00:10Z"^^xsd:dateTime .
+
+<https://example.org/18>
+  a sosa:Observation ;
+  sosa:madeBySensor <pressure_sensor_1> ;
+  sosa:hasSimpleResult "1009.75"^^xsd:double ;
+  sosa:observedProperty <airPressure> ;
+  sosa:resultTime "2025-12-01T00:00:00Z"^^xsd:dateTime .
+
+<https://example.org/19>
+  a sosa:Observation ;
+  sosa:madeBySensor <light_sensor_1> ;
+  sosa:hasSimpleResult "0.5"^^xsd:double ;
+  sosa:observedProperty <lightIntensity> ;
+  sosa:resultTime "2025-12-01T18:30:00Z"^^xsd:dateTime .
+
+<https://example.org/20>
+  a sosa:Observation ;
+  sosa:madeBySensor <wind_sensor_1> ;
+  sosa:hasSimpleResult "12.2"^^xsd:double ;
+  sosa:observedProperty <windSpeed> ;
+  sosa:resultTime "2025-12-15T15:45:20Z"^^xsd:dateTime .
+
+<https://example.org/21>
+  a sosa:Observation ;
+  sosa:madeBySensor <precipitation_sensor_1> ;
+  sosa:hasSimpleResult "2.4"^^xsd:double ;
+  sosa:observedProperty <precipitation> ;
+  sosa:resultTime "2026-01-01T03:20:00Z"^^xsd:dateTime .
+
+<https://example.org/22>
+  a sosa:Observation ;
+  sosa:madeBySensor <temp_sensor_1> ;
+  sosa:hasSimpleResult "3.1"^^xsd:double ;
+  sosa:observedProperty <temperature> ;
+  sosa:resultTime "2026-01-10T09:10:05Z"^^xsd:dateTime .
+
+<https://example.org/23>
+  a sosa:Observation ;
+  sosa:madeBySensor <humidity_sensor_1> ;
+  sosa:hasSimpleResult "71.4"^^xsd:double ;
+  sosa:observedProperty <humidity> ;
+  sosa:resultTime "2026-01-10T09:10:10Z"^^xsd:dateTime .
+
+<https://example.org/24>
+  a sosa:Observation ;
+  sosa:madeBySensor <pressure_sensor_1> ;
+  sosa:hasSimpleResult "1015.00"^^xsd:double ;
+  sosa:observedProperty <airPressure> ;
+  sosa:resultTime "2026-02-01T00:00:01Z"^^xsd:dateTime .
+
+<https://example.org/25>
+  a sosa:Observation ;
+  sosa:madeBySensor <light_sensor_1> ;
+  sosa:hasSimpleResult "1023.8"^^xsd:double ;
+  sosa:observedProperty <lightIntensity> ;
+  sosa:resultTime "2026-02-14T12:14:14Z"^^xsd:dateTime .
+
+<https://example.org/26>
+  a sosa:Observation ;
+  sosa:madeBySensor <wind_sensor_1> ;
+  sosa:hasSimpleResult "7.5"^^xsd:double ;
+  sosa:observedProperty <windSpeed> ;
+  sosa:resultTime "2026-03-01T16:00:00Z"^^xsd:dateTime .
+
+<https://example.org/27>
+  a sosa:Observation ;
+  sosa:madeBySensor <precipitation_sensor_1> ;
+  sosa:hasSimpleResult "5.6"^^xsd:double ;
+  sosa:observedProperty <precipitation> ;
+  sosa:resultTime "2026-03-15T05:05:05Z"^^xsd:dateTime .
+
+<https://example.org/28>
+  a sosa:Observation ;
+  sosa:madeBySensor <temp_sensor_2> ;
+  sosa:hasSimpleResult "14.2"^^xsd:double ;
+  sosa:observedProperty <temperature> ;
+  sosa:resultTime "2026-04-01T22:22:22Z"^^xsd:dateTime .
+
+<https://example.org/29>
+  a sosa:Observation ;
+  sosa:madeBySensor <humidity_sensor_2> ;
+  sosa:hasSimpleResult "55.5"^^xsd:double ;
+  sosa:observedProperty <humidity> ;
+  sosa:resultTime "2026-04-10T10:10:10Z"^^xsd:dateTime .
+
+<https://example.org/30>
+  a sosa:Observation ;
+  sosa:madeBySensor <pressure_sensor_2> ;
+  sosa:hasSimpleResult "1003.45"^^xsd:double ;
+  sosa:observedProperty <airPressure> ;
+  sosa:resultTime "2026-05-01T01:01:01Z"^^xsd:dateTime .
+
+<https://example.org/31>
+  a sosa:Observation ;
+  sosa:madeBySensor <light_sensor_2> ;
+  sosa:hasSimpleResult "320.7"^^xsd:double ;
+  sosa:observedProperty <lightIntensity> ;
+  sosa:resultTime "2026-05-20T20:20:20Z"^^xsd:dateTime .
+
+<https://example.org/32>
+  a sosa:Observation ;
+  sosa:madeBySensor <wind_sensor_2> ;
+  sosa:hasSimpleResult "9.9"^^xsd:double ;
+  sosa:observedProperty <windSpeed> ;
+  sosa:resultTime "2026-05-31T23:59:59Z"^^xsd:dateTime .
