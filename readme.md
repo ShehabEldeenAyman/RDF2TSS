@@ -4,7 +4,7 @@ Certainly! Here's a concise README documentation for your script explaining how 
 
 # RDF to Time Series Snippets Converter
 
-This Python script processes RDF sensor observation data and transforms it into time series snippets in RDF format. It is designed to work with sensor data modeled using the [SOS](https://www.w3.org/TR/vocab-ssn/) (Sensor, Observation, Sample, and Actuator) ontology and produces a compact representation suitable for time series analysis.
+This Python script processes RDF sensor observation data and transforms it into time series snippets in RDF format. It is designed to work with sensor data modeled using the [SOSA](https://www.w3.org/TR/vocab-ssn/) (Sensor, Observation, Sample, and Actuator) ontology and produces a compact representation suitable for time series analysis.
 
 ## Overview
 
