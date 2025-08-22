@@ -1,4 +1,4 @@
-@prefix tss:  <http://example.org/tss#> .
+@prefix tss:  <https://w3id.org/tss#> .
 @prefix sosa: <http://www.w3.org/ns/sosa/> .
 @prefix rdf:  <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix xsd:  <http://www.w3.org/2001/XMLSchema#> .
