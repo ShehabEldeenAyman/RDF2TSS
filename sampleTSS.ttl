@@ -111,7 +111,7 @@
       "id": "@id",
       "time": { "@id": "http://www.w3.org/ns/sosa/resultTime", "@type": "http://www.w3.org/2001/XMLSchema#dateTime" },
       "value": { "@id": "http://www.w3.org/ns/sosa/hasSimpleResult", "@type": "http://www.w3.org/2001/XMLSchema#double" }
-    }
+    }about
   }"""^^rdf:JSON ;
   tss:about [ a tss:PointTemplate ; sosa:madeBySensor <sensor/chlorophyll_sensor_1> ; sosa:observedProperty <property/chlorophyll> ] .
 

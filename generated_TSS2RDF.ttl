@@ -2,8 +2,7 @@
 @prefix sosa: <http://www.w3.org/ns/sosa/> .
 @prefix tss: <https://w3id.org/tss#> .
 
-<https://example.org/snippet/2026-01-01-temp-1> a tss:PointTemplate ;
-    sosa:madeBySensor <https://example.org/sensor/water_temp_sensor_1> ;
+<https://example.org/snippet/2026-01-01-temp-1> sosa:madeBySensor <https://example.org/sensor/water_temp_sensor_1> ;
     sosa:observedProperty <https://example.org/property/waterTemperature> ;
     tss:points """[
     { "id": "https://example.org/temp/0", "time": "2026-01-01T06:00:00Z", "value": 5.4 },
@@ -12,8 +11,7 @@
     { "id": "https://example.org/temp/3", "time": "2026-01-01T09:00:00Z", "value": 6.1 }
   ]"""^^rdf:JSON .
 
-<https://example.org/snippet/2026-01-02-humidity-1> a tss:PointTemplate ;
-    sosa:madeBySensor <https://example.org/sensor/salinity_sensor_1> ;
+<https://example.org/snippet/2026-01-02-humidity-1> sosa:madeBySensor <https://example.org/sensor/salinity_sensor_1> ;
     sosa:observedProperty <https://example.org/property/salinity> ;
     tss:points """[
     { "id": "https://example.org/hum/0", "time": "2026-01-02T01:00:00Z", "value": 48 },
@@ -21,8 +19,7 @@
     { "id": "https://example.org/hum/2", "time": "2026-01-02T07:00:00Z", "value": 53 }
   ]"""^^rdf:JSON .
 
-<https://example.org/snippet/2026-01-03-ph-1> a tss:PointTemplate ;
-    sosa:madeBySensor <https://example.org/sensor/ph_probe_1> ;
+<https://example.org/snippet/2026-01-03-ph-1> sosa:madeBySensor <https://example.org/sensor/ph_probe_1> ;
     sosa:observedProperty <https://example.org/property/waterPH> ;
     tss:points """[
     { "id": "https://example.org/ph/0", "time": "2026-01-03T02:15:00Z", "value": 7.12 },
@@ -31,8 +28,7 @@
     { "id": "https://example.org/ph/3", "time": "2026-01-03T11:15:00Z", "value": 7.01 }
   ]"""^^rdf:JSON .
 
-<https://example.org/snippet/2026-01-04-cond-1> a tss:PointTemplate ;
-    sosa:madeBySensor <https://example.org/sensor/cond_sensor_1> ;
+<https://example.org/snippet/2026-01-04-cond-1> sosa:madeBySensor <https://example.org/sensor/cond_sensor_1> ;
     sosa:observedProperty <https://example.org/property/conductivity> ;
     tss:points """[
     { "id": "https://example.org/cond/0", "time": "2026-01-04T00:30:00Z", "value": 120.5 },
@@ -40,8 +36,7 @@
     { "id": "https://example.org/cond/2", "time": "2026-01-04T12:30:00Z", "value": 121.3 }
   ]"""^^rdf:JSON .
 
-<https://example.org/snippet/2026-01-05-press-1> a tss:PointTemplate ;
-    sosa:madeBySensor <https://example.org/sensor/tds_sensor_1> ;
+<https://example.org/snippet/2026-01-05-press-1> sosa:madeBySensor <https://example.org/sensor/tds_sensor_1> ;
     sosa:observedProperty <https://example.org/property/totalDissolvedSolids> ;
     tss:points """[
     { "id": "https://example.org/press/0", "time": "2026-01-05T03:00:00Z", "value": 101325 },
@@ -49,8 +44,7 @@
     { "id": "https://example.org/press/2", "time": "2026-01-05T15:00:00Z", "value": 101280 }
   ]"""^^rdf:JSON .
 
-<https://example.org/snippet/2026-01-06-light-1> a tss:PointTemplate ;
-    sosa:madeBySensor <https://example.org/sensor/chlorophyll_sensor_1> ;
+<https://example.org/snippet/2026-01-06-light-1> sosa:madeBySensor <https://example.org/sensor/chlorophyll_sensor_1> ;
     sosa:observedProperty <https://example.org/property/chlorophyll> ;
     tss:points """[
     { "id": "https://example.org/light/0", "time": "2026-01-06T05:30:00Z", "value": 120.0 },
@@ -58,8 +52,7 @@
     { "id": "https://example.org/light/2", "time": "2026-01-06T18:30:00Z", "value": 200.2 }
   ]"""^^rdf:JSON .
 
-<https://example.org/snippet/2026-01-07-motion-1> a tss:PointTemplate ;
-    sosa:madeBySensor <https://example.org/sensor/do_sensor_1> ;
+<https://example.org/snippet/2026-01-07-motion-1> sosa:madeBySensor <https://example.org/sensor/do_sensor_1> ;
     sosa:observedProperty <https://example.org/property/dissolvedOxygen> ;
     tss:points """[
     { "id": "https://example.org/motion/0", "time": "2026-01-07T00:05:00Z", "value": false },
@@ -67,8 +60,7 @@
     { "id": "https://example.org/motion/2", "time": "2026-01-07T00:15:00Z", "value": true }
   ]"""^^rdf:JSON .
 
-<https://example.org/snippet/2026-01-08-co2-1> a tss:PointTemplate ;
-    sosa:madeBySensor <https://example.org/sensor/nitrate_sensor_1> ;
+<https://example.org/snippet/2026-01-08-co2-1> sosa:madeBySensor <https://example.org/sensor/nitrate_sensor_1> ;
     sosa:observedProperty <https://example.org/property/nitrate> ;
     tss:points """[
     { "id": "https://example.org/co2/0", "time": "2026-01-08T09:00:00Z", "value": 415.2 },
@@ -76,8 +68,7 @@
     { "id": "https://example.org/co2/2", "time": "2026-01-08T15:00:00Z", "value": 418.0 }
   ]"""^^rdf:JSON .
 
-<https://example.org/snippet/2026-01-09-noise-1> a tss:PointTemplate ;
-    sosa:madeBySensor <https://example.org/sensor/tss_sensor_1> ;
+<https://example.org/snippet/2026-01-09-noise-1> sosa:madeBySensor <https://example.org/sensor/tss_sensor_1> ;
     sosa:observedProperty <https://example.org/property/totalSuspendedSolids> ;
     tss:points """[
     { "id": "https://example.org/noise/0", "time": "2026-01-09T10:00:00Z", "value": 35.2 },
@@ -85,8 +76,7 @@
     { "id": "https://example.org/noise/2", "time": "2026-01-09T18:00:00Z", "value": 41.0 }
   ]"""^^rdf:JSON .
 
-<https://example.org/snippet/2026-01-10-turbidity-1> a tss:PointTemplate ;
-    sosa:madeBySensor <https://example.org/sensor/turbidity_sensor_1> ;
+<https://example.org/snippet/2026-01-10-turbidity-1> sosa:madeBySensor <https://example.org/sensor/turbidity_sensor_1> ;
     sosa:observedProperty <https://example.org/property/turbidity> ;
     tss:points """[
     { "id": "https://example.org/turb/0", "time": "2026-01-10T02:00:00Z", "value": 2.1 },
@@ -94,8 +84,7 @@
     { "id": "https://example.org/turb/2", "time": "2026-01-10T14:00:00Z", "value": 2.4 }
   ]"""^^rdf:JSON .
 
-<https://example.org/snippet/2026-01-11-flow-1> a tss:PointTemplate ;
-    sosa:madeBySensor <https://example.org/sensor/flow_sensor_1> ;
+<https://example.org/snippet/2026-01-11-flow-1> sosa:madeBySensor <https://example.org/sensor/flow_sensor_1> ;
     sosa:observedProperty <https://example.org/property/flowRate> ;
     tss:points """[
     { "id": "https://example.org/flow/0", "time": "2026-01-11T01:00:00Z", "value": 0.45 },
@@ -103,8 +92,7 @@
     { "id": "https://example.org/flow/2", "time": "2026-01-11T13:00:00Z", "value": 0.55 }
   ]"""^^rdf:JSON .
 
-<https://example.org/snippet/2026-01-12-level-1> a tss:PointTemplate ;
-    sosa:madeBySensor <https://example.org/sensor/level_sensor_1> ;
+<https://example.org/snippet/2026-01-12-level-1> sosa:madeBySensor <https://example.org/sensor/level_sensor_1> ;
     sosa:observedProperty <https://example.org/property/waterLevel> ;
     tss:points """[
     { "id": "https://example.org/level/0", "time": "2026-01-12T04:00:00Z", "value": 1.12 },
@@ -112,8 +100,7 @@
     { "id": "https://example.org/level/2", "time": "2026-01-12T16:00:00Z", "value": 1.10 }
   ]"""^^rdf:JSON .
 
-<https://example.org/snippet/2026-01-13-batt-1> a tss:PointTemplate ;
-    sosa:madeBySensor <https://example.org/sensor/cod_sensor_1> ;
+<https://example.org/snippet/2026-01-13-batt-1> sosa:madeBySensor <https://example.org/sensor/cod_sensor_1> ;
     sosa:observedProperty <https://example.org/property/chemicalOxygenDemand> ;
     tss:points """[
     { "id": "https://example.org/batt/0", "time": "2026-01-13T00:00:00Z", "value": 3.98 },
@@ -121,8 +108,7 @@
     { "id": "https://example.org/batt/2", "time": "2026-01-13T23:59:59Z", "value": 3.92 }
   ]"""^^rdf:JSON .
 
-<https://example.org/snippet/2026-01-14-orp-1> a tss:PointTemplate ;
-    sosa:madeBySensor <https://example.org/sensor/orp_sensor_1> ;
+<https://example.org/snippet/2026-01-14-orp-1> sosa:madeBySensor <https://example.org/sensor/orp_sensor_1> ;
     sosa:observedProperty <https://example.org/property/oxidationReductionPotential> ;
     tss:points """[
     { "id": "https://example.org/orp/0", "time": "2026-01-14T03:30:00Z", "value": 250 },
@@ -130,8 +116,7 @@
     { "id": "https://example.org/orp/2", "time": "2026-01-14T15:30:00Z", "value": 248 }
   ]"""^^rdf:JSON .
 
-<https://example.org/snippet/2026-01-15-custom-1> a tss:PointTemplate ;
-    sosa:madeBySensor <https://example.org/sensor/toc_sensor_1> ;
+<https://example.org/snippet/2026-01-15-custom-1> sosa:madeBySensor <https://example.org/sensor/toc_sensor_1> ;
     sosa:observedProperty <https://example.org/property/totalOrganicCarbon> ;
     tss:points """[
     { "id": "https://example.org/custom/0", "time": "2026-01-15T06:00:00Z", "value": 1 },
