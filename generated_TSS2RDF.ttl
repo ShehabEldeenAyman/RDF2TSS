@@ -1,139 +1,189 @@
 @prefix sosa: <http://www.w3.org/ns/sosa/> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
-<https://example.org/snippet/2026-01-01-temp-1> sosa:hasSimpleResult 5.2,
-        5.4,
-        6.1 ;
-    sosa:madeBySensor <https://example.org/sensor/water_temp_sensor_1> ;
-    sosa:observedProperty <https://example.org/property/waterTemperature> ;
-    sosa:resultTime "2026-01-01T06:00:00+00:00"^^xsd:dateTime,
-        "2026-01-01T07:00:00+00:00"^^xsd:dateTime,
-        "2026-01-01T08:00:00+00:00"^^xsd:dateTime,
-        "2026-01-01T09:00:00+00:00"^^xsd:dateTime .
+<https://example.org/batt/0> sosa:hasSimpleResult 3.98 ;
+    sosa:resultTime "2026-01-13T00:00:00+00:00"^^xsd:dateTime .
 
-<https://example.org/snippet/2026-01-02-humidity-1> sosa:hasSimpleResult 48.0,
-        51.0,
-        53.0 ;
-    sosa:madeBySensor <https://example.org/sensor/salinity_sensor_1> ;
-    sosa:observedProperty <https://example.org/property/salinity> ;
-    sosa:resultTime "2026-01-02T01:00:00+00:00"^^xsd:dateTime,
-        "2026-01-02T04:00:00+00:00"^^xsd:dateTime,
-        "2026-01-02T07:00:00+00:00"^^xsd:dateTime .
+<https://example.org/batt/1> sosa:hasSimpleResult 3.95 ;
+    sosa:resultTime "2026-01-13T12:00:00+00:00"^^xsd:dateTime .
 
-<https://example.org/snippet/2026-01-03-ph-1> sosa:hasSimpleResult 6.98,
-        7.01,
-        7.05,
-        7.12 ;
-    sosa:madeBySensor <https://example.org/sensor/ph_probe_1> ;
-    sosa:observedProperty <https://example.org/property/waterPH> ;
-    sosa:resultTime "2026-01-03T02:15:00+00:00"^^xsd:dateTime,
-        "2026-01-03T05:15:00+00:00"^^xsd:dateTime,
-        "2026-01-03T08:15:00+00:00"^^xsd:dateTime,
-        "2026-01-03T11:15:00+00:00"^^xsd:dateTime .
+<https://example.org/batt/2> sosa:hasSimpleResult 3.92 ;
+    sosa:resultTime "2026-01-13T23:59:59+00:00"^^xsd:dateTime .
 
-<https://example.org/snippet/2026-01-04-cond-1> sosa:hasSimpleResult 118.9,
-        120.5,
-        121.3 ;
-    sosa:madeBySensor <https://example.org/sensor/cond_sensor_1> ;
-    sosa:observedProperty <https://example.org/property/conductivity> ;
-    sosa:resultTime "2026-01-04T00:30:00+00:00"^^xsd:dateTime,
-        "2026-01-04T06:30:00+00:00"^^xsd:dateTime,
-        "2026-01-04T12:30:00+00:00"^^xsd:dateTime .
+<https://example.org/co2/0> sosa:hasSimpleResult 415.2 ;
+    sosa:resultTime "2026-01-08T09:00:00+00:00"^^xsd:dateTime .
 
-<https://example.org/snippet/2026-01-05-press-1> sosa:hasSimpleResult 101280.0,
-        101300.0,
-        101325.0 ;
-    sosa:madeBySensor <https://example.org/sensor/tds_sensor_1> ;
-    sosa:observedProperty <https://example.org/property/totalDissolvedSolids> ;
-    sosa:resultTime "2026-01-05T03:00:00+00:00"^^xsd:dateTime,
-        "2026-01-05T09:00:00+00:00"^^xsd:dateTime,
-        "2026-01-05T15:00:00+00:00"^^xsd:dateTime .
+<https://example.org/co2/1> sosa:hasSimpleResult 420.7 ;
+    sosa:resultTime "2026-01-08T12:00:00+00:00"^^xsd:dateTime .
 
-<https://example.org/snippet/2026-01-06-light-1> sosa:hasSimpleResult 120.0,
-        200.2,
-        850.5 ;
-    sosa:madeBySensor <https://example.org/sensor/chlorophyll_sensor_1> ;
-    sosa:observedProperty <https://example.org/property/chlorophyll> ;
-    sosa:resultTime "2026-01-06T05:30:00+00:00"^^xsd:dateTime,
-        "2026-01-06T12:30:00+00:00"^^xsd:dateTime,
-        "2026-01-06T18:30:00+00:00"^^xsd:dateTime .
+<https://example.org/co2/2> sosa:hasSimpleResult 418.0 ;
+    sosa:resultTime "2026-01-08T15:00:00+00:00"^^xsd:dateTime .
 
-<https://example.org/snippet/2026-01-07-motion-1> sosa:hasSimpleResult "false"^^xsd:decimal,
-        "true"^^xsd:decimal ;
-    sosa:madeBySensor <https://example.org/sensor/do_sensor_1> ;
-    sosa:observedProperty <https://example.org/property/dissolvedOxygen> ;
-    sosa:resultTime "2026-01-07T00:05:00+00:00"^^xsd:dateTime,
-        "2026-01-07T00:10:00+00:00"^^xsd:dateTime,
-        "2026-01-07T00:15:00+00:00"^^xsd:dateTime .
+<https://example.org/cond/0> sosa:hasSimpleResult 120.5 ;
+    sosa:resultTime "2026-01-04T00:30:00+00:00"^^xsd:dateTime .
 
-<https://example.org/snippet/2026-01-08-co2-1> sosa:hasSimpleResult 415.2,
-        418.0,
-        420.7 ;
-    sosa:madeBySensor <https://example.org/sensor/nitrate_sensor_1> ;
-    sosa:observedProperty <https://example.org/property/nitrate> ;
-    sosa:resultTime "2026-01-08T09:00:00+00:00"^^xsd:dateTime,
-        "2026-01-08T12:00:00+00:00"^^xsd:dateTime,
-        "2026-01-08T15:00:00+00:00"^^xsd:dateTime .
+<https://example.org/cond/1> sosa:hasSimpleResult 118.9 ;
+    sosa:resultTime "2026-01-04T06:30:00+00:00"^^xsd:dateTime .
 
-<https://example.org/snippet/2026-01-09-noise-1> sosa:hasSimpleResult 35.2,
-        41.0,
-        48.7 ;
-    sosa:madeBySensor <https://example.org/sensor/tss_sensor_1> ;
-    sosa:observedProperty <https://example.org/property/totalSuspendedSolids> ;
-    sosa:resultTime "2026-01-09T10:00:00+00:00"^^xsd:dateTime,
-        "2026-01-09T14:00:00+00:00"^^xsd:dateTime,
-        "2026-01-09T18:00:00+00:00"^^xsd:dateTime .
+<https://example.org/cond/2> sosa:hasSimpleResult 121.3 ;
+    sosa:resultTime "2026-01-04T12:30:00+00:00"^^xsd:dateTime .
 
-<https://example.org/snippet/2026-01-10-turbidity-1> sosa:hasSimpleResult 1.9,
-        2.1,
-        2.4 ;
-    sosa:madeBySensor <https://example.org/sensor/turbidity_sensor_1> ;
-    sosa:observedProperty <https://example.org/property/turbidity> ;
-    sosa:resultTime "2026-01-10T02:00:00+00:00"^^xsd:dateTime,
-        "2026-01-10T08:00:00+00:00"^^xsd:dateTime,
-        "2026-01-10T14:00:00+00:00"^^xsd:dateTime .
+<https://example.org/custom/0> sosa:hasSimpleResult 1.0 ;
+    sosa:resultTime "2026-01-15T06:00:00+00:00"^^xsd:dateTime .
 
-<https://example.org/snippet/2026-01-11-flow-1> sosa:hasSimpleResult 0.45,
-        0.55,
-        0.6 ;
-    sosa:madeBySensor <https://example.org/sensor/flow_sensor_1> ;
-    sosa:observedProperty <https://example.org/property/flowRate> ;
-    sosa:resultTime "2026-01-11T01:00:00+00:00"^^xsd:dateTime,
-        "2026-01-11T07:00:00+00:00"^^xsd:dateTime,
-        "2026-01-11T13:00:00+00:00"^^xsd:dateTime .
+<https://example.org/custom/1> sosa:hasSimpleResult 0.0 ;
+    sosa:resultTime "2026-01-15T12:00:00+00:00"^^xsd:dateTime .
 
-<https://example.org/snippet/2026-01-12-level-1> sosa:hasSimpleResult 1.1,
-        1.12,
-        1.15 ;
-    sosa:madeBySensor <https://example.org/sensor/level_sensor_1> ;
-    sosa:observedProperty <https://example.org/property/waterLevel> ;
-    sosa:resultTime "2026-01-12T04:00:00+00:00"^^xsd:dateTime,
-        "2026-01-12T10:00:00+00:00"^^xsd:dateTime,
-        "2026-01-12T16:00:00+00:00"^^xsd:dateTime .
+<https://example.org/custom/2> sosa:hasSimpleResult 1.0 ;
+    sosa:resultTime "2026-01-15T18:00:00+00:00"^^xsd:dateTime .
 
-<https://example.org/snippet/2026-01-13-batt-1> sosa:hasSimpleResult 3.92,
-        3.95,
-        3.98 ;
-    sosa:madeBySensor <https://example.org/sensor/cod_sensor_1> ;
-    sosa:observedProperty <https://example.org/property/chemicalOxygenDemand> ;
-    sosa:resultTime "2026-01-13T00:00:00+00:00"^^xsd:dateTime,
-        "2026-01-13T12:00:00+00:00"^^xsd:dateTime,
-        "2026-01-13T23:59:59+00:00"^^xsd:dateTime .
+<https://example.org/flow/0> sosa:hasSimpleResult 0.45 ;
+    sosa:resultTime "2026-01-11T01:00:00+00:00"^^xsd:dateTime .
 
-<https://example.org/snippet/2026-01-14-orp-1> sosa:hasSimpleResult 245.0,
-        248.0,
-        250.0 ;
-    sosa:madeBySensor <https://example.org/sensor/orp_sensor_1> ;
-    sosa:observedProperty <https://example.org/property/oxidationReductionPotential> ;
-    sosa:resultTime "2026-01-14T03:30:00+00:00"^^xsd:dateTime,
-        "2026-01-14T09:30:00+00:00"^^xsd:dateTime,
-        "2026-01-14T15:30:00+00:00"^^xsd:dateTime .
+<https://example.org/flow/1> sosa:hasSimpleResult 0.6 ;
+    sosa:resultTime "2026-01-11T07:00:00+00:00"^^xsd:dateTime .
 
-<https://example.org/snippet/2026-01-15-custom-1> sosa:hasSimpleResult 0.0,
-        1.0 ;
-    sosa:madeBySensor <https://example.org/sensor/toc_sensor_1> ;
-    sosa:observedProperty <https://example.org/property/totalOrganicCarbon> ;
-    sosa:resultTime "2026-01-15T06:00:00+00:00"^^xsd:dateTime,
-        "2026-01-15T12:00:00+00:00"^^xsd:dateTime,
-        "2026-01-15T18:00:00+00:00"^^xsd:dateTime .
+<https://example.org/flow/2> sosa:hasSimpleResult 0.55 ;
+    sosa:resultTime "2026-01-11T13:00:00+00:00"^^xsd:dateTime .
+
+<https://example.org/hum/0> sosa:hasSimpleResult 48.0 ;
+    sosa:resultTime "2026-01-02T01:00:00+00:00"^^xsd:dateTime .
+
+<https://example.org/hum/1> sosa:hasSimpleResult 51.0 ;
+    sosa:resultTime "2026-01-02T04:00:00+00:00"^^xsd:dateTime .
+
+<https://example.org/hum/2> sosa:hasSimpleResult 53.0 ;
+    sosa:resultTime "2026-01-02T07:00:00+00:00"^^xsd:dateTime .
+
+<https://example.org/level/0> sosa:hasSimpleResult 1.12 ;
+    sosa:resultTime "2026-01-12T04:00:00+00:00"^^xsd:dateTime .
+
+<https://example.org/level/1> sosa:hasSimpleResult 1.15 ;
+    sosa:resultTime "2026-01-12T10:00:00+00:00"^^xsd:dateTime .
+
+<https://example.org/level/2> sosa:hasSimpleResult 1.1 ;
+    sosa:resultTime "2026-01-12T16:00:00+00:00"^^xsd:dateTime .
+
+<https://example.org/light/0> sosa:hasSimpleResult 120.0 ;
+    sosa:resultTime "2026-01-06T05:30:00+00:00"^^xsd:dateTime .
+
+<https://example.org/light/1> sosa:hasSimpleResult 850.5 ;
+    sosa:resultTime "2026-01-06T12:30:00+00:00"^^xsd:dateTime .
+
+<https://example.org/light/2> sosa:hasSimpleResult 200.2 ;
+    sosa:resultTime "2026-01-06T18:30:00+00:00"^^xsd:dateTime .
+
+<https://example.org/motion/0> sosa:hasSimpleResult "false"^^xsd:decimal ;
+    sosa:resultTime "2026-01-07T00:05:00+00:00"^^xsd:dateTime .
+
+<https://example.org/motion/1> sosa:hasSimpleResult "true"^^xsd:decimal ;
+    sosa:resultTime "2026-01-07T00:10:00+00:00"^^xsd:dateTime .
+
+<https://example.org/motion/2> sosa:hasSimpleResult "true"^^xsd:decimal ;
+    sosa:resultTime "2026-01-07T00:15:00+00:00"^^xsd:dateTime .
+
+<https://example.org/noise/0> sosa:hasSimpleResult 35.2 ;
+    sosa:resultTime "2026-01-09T10:00:00+00:00"^^xsd:dateTime .
+
+<https://example.org/noise/1> sosa:hasSimpleResult 48.7 ;
+    sosa:resultTime "2026-01-09T14:00:00+00:00"^^xsd:dateTime .
+
+<https://example.org/noise/2> sosa:hasSimpleResult 41.0 ;
+    sosa:resultTime "2026-01-09T18:00:00+00:00"^^xsd:dateTime .
+
+<https://example.org/orp/0> sosa:hasSimpleResult 250.0 ;
+    sosa:resultTime "2026-01-14T03:30:00+00:00"^^xsd:dateTime .
+
+<https://example.org/orp/1> sosa:hasSimpleResult 245.0 ;
+    sosa:resultTime "2026-01-14T09:30:00+00:00"^^xsd:dateTime .
+
+<https://example.org/orp/2> sosa:hasSimpleResult 248.0 ;
+    sosa:resultTime "2026-01-14T15:30:00+00:00"^^xsd:dateTime .
+
+<https://example.org/ph/0> sosa:hasSimpleResult 7.12 ;
+    sosa:resultTime "2026-01-03T02:15:00+00:00"^^xsd:dateTime .
+
+<https://example.org/ph/1> sosa:hasSimpleResult 7.05 ;
+    sosa:resultTime "2026-01-03T05:15:00+00:00"^^xsd:dateTime .
+
+<https://example.org/ph/2> sosa:hasSimpleResult 6.98 ;
+    sosa:resultTime "2026-01-03T08:15:00+00:00"^^xsd:dateTime .
+
+<https://example.org/ph/3> sosa:hasSimpleResult 7.01 ;
+    sosa:resultTime "2026-01-03T11:15:00+00:00"^^xsd:dateTime .
+
+<https://example.org/press/0> sosa:hasSimpleResult 101325.0 ;
+    sosa:resultTime "2026-01-05T03:00:00+00:00"^^xsd:dateTime .
+
+<https://example.org/press/1> sosa:hasSimpleResult 101300.0 ;
+    sosa:resultTime "2026-01-05T09:00:00+00:00"^^xsd:dateTime .
+
+<https://example.org/press/2> sosa:hasSimpleResult 101280.0 ;
+    sosa:resultTime "2026-01-05T15:00:00+00:00"^^xsd:dateTime .
+
+<https://example.org/snippet/2026-01-01-temp-1> sosa:madeBySensor <https://example.org/sensor/water_temp_sensor_1> ;
+    sosa:observedProperty <https://example.org/property/waterTemperature> .
+
+<https://example.org/snippet/2026-01-02-humidity-1> sosa:madeBySensor <https://example.org/sensor/salinity_sensor_1> ;
+    sosa:observedProperty <https://example.org/property/salinity> .
+
+<https://example.org/snippet/2026-01-03-ph-1> sosa:madeBySensor <https://example.org/sensor/ph_probe_1> ;
+    sosa:observedProperty <https://example.org/property/waterPH> .
+
+<https://example.org/snippet/2026-01-04-cond-1> sosa:madeBySensor <https://example.org/sensor/cond_sensor_1> ;
+    sosa:observedProperty <https://example.org/property/conductivity> .
+
+<https://example.org/snippet/2026-01-05-press-1> sosa:madeBySensor <https://example.org/sensor/tds_sensor_1> ;
+    sosa:observedProperty <https://example.org/property/totalDissolvedSolids> .
+
+<https://example.org/snippet/2026-01-06-light-1> sosa:madeBySensor <https://example.org/sensor/chlorophyll_sensor_1> ;
+    sosa:observedProperty <https://example.org/property/chlorophyll> .
+
+<https://example.org/snippet/2026-01-07-motion-1> sosa:madeBySensor <https://example.org/sensor/do_sensor_1> ;
+    sosa:observedProperty <https://example.org/property/dissolvedOxygen> .
+
+<https://example.org/snippet/2026-01-08-co2-1> sosa:madeBySensor <https://example.org/sensor/nitrate_sensor_1> ;
+    sosa:observedProperty <https://example.org/property/nitrate> .
+
+<https://example.org/snippet/2026-01-09-noise-1> sosa:madeBySensor <https://example.org/sensor/tss_sensor_1> ;
+    sosa:observedProperty <https://example.org/property/totalSuspendedSolids> .
+
+<https://example.org/snippet/2026-01-10-turbidity-1> sosa:madeBySensor <https://example.org/sensor/turbidity_sensor_1> ;
+    sosa:observedProperty <https://example.org/property/turbidity> .
+
+<https://example.org/snippet/2026-01-11-flow-1> sosa:madeBySensor <https://example.org/sensor/flow_sensor_1> ;
+    sosa:observedProperty <https://example.org/property/flowRate> .
+
+<https://example.org/snippet/2026-01-12-level-1> sosa:madeBySensor <https://example.org/sensor/level_sensor_1> ;
+    sosa:observedProperty <https://example.org/property/waterLevel> .
+
+<https://example.org/snippet/2026-01-13-batt-1> sosa:madeBySensor <https://example.org/sensor/cod_sensor_1> ;
+    sosa:observedProperty <https://example.org/property/chemicalOxygenDemand> .
+
+<https://example.org/snippet/2026-01-14-orp-1> sosa:madeBySensor <https://example.org/sensor/orp_sensor_1> ;
+    sosa:observedProperty <https://example.org/property/oxidationReductionPotential> .
+
+<https://example.org/snippet/2026-01-15-custom-1> sosa:madeBySensor <https://example.org/sensor/toc_sensor_1> ;
+    sosa:observedProperty <https://example.org/property/totalOrganicCarbon> .
+
+<https://example.org/temp/0> sosa:hasSimpleResult 5.4 ;
+    sosa:resultTime "2026-01-01T06:00:00+00:00"^^xsd:dateTime .
+
+<https://example.org/temp/1> sosa:hasSimpleResult 5.2 ;
+    sosa:resultTime "2026-01-01T07:00:00+00:00"^^xsd:dateTime .
+
+<https://example.org/temp/2> sosa:hasSimpleResult 5.2 ;
+    sosa:resultTime "2026-01-01T08:00:00+00:00"^^xsd:dateTime .
+
+<https://example.org/temp/3> sosa:hasSimpleResult 6.1 ;
+    sosa:resultTime "2026-01-01T09:00:00+00:00"^^xsd:dateTime .
+
+<https://example.org/turb/0> sosa:hasSimpleResult 2.1 ;
+    sosa:resultTime "2026-01-10T02:00:00+00:00"^^xsd:dateTime .
+
+<https://example.org/turb/1> sosa:hasSimpleResult 1.9 ;
+    sosa:resultTime "2026-01-10T08:00:00+00:00"^^xsd:dateTime .
+
+<https://example.org/turb/2> sosa:hasSimpleResult 2.4 ;
+    sosa:resultTime "2026-01-10T14:00:00+00:00"^^xsd:dateTime .
 
