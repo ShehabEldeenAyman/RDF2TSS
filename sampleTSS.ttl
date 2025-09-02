@@ -1,0 +1,278 @@
+@prefix tss:  <https://w3id.org/tss#> .
+@prefix sosa: <http://www.w3.org/ns/sosa/> .
+@prefix rdf:  <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix xsd:  <http://www.w3.org/2001/XMLSchema#> .
+
+# 15 example tss:Snippet instances from various sensors — all observed properties relate to water
+
+<snippet/2026-01-01-temp-1> a tss:Snippet ;
+  tss:points """[
+    { "id": "https://example.org/temp/0", "time": "2026-01-01T06:00:00Z", "value": 5.4 },
+    { "id": "https://example.org/temp/1", "time": "2026-01-01T07:00:00Z", "value": 5.2 },
+    { "id": "https://example.org/temp/2", "time": "2026-01-01T08:00:00Z", "value": 5.2 },
+    { "id": "https://example.org/temp/3", "time": "2026-01-01T09:00:00Z", "value": 6.1 }
+  ]"""^^rdf:JSON ;
+  tss:from  "2026-01-01T00:00:00Z"^^xsd:dateTime ;
+  tss:until "2026-01-02T00:00:00Z"^^xsd:dateTime ;
+  tss:pointType sosa:Observation ;
+  tss:context """{
+    "@context": {
+      "id": "@id",
+      "time": { "@id": "http://www.w3.org/ns/sosa/resultTime", "@type": "http://www.w3.org/2001/XMLSchema#dateTime" },
+      "value": { "@id": "http://www.w3.org/ns/sosa/hasSimpleResult", "@type": "http://www.w3.org/2001/XMLSchema#decimal" }
+    }
+  }"""^^rdf:JSON ;
+  tss:about [ a tss:PointTemplate ; sosa:madeBySensor <sensor/water_temp_sensor_1> ; sosa:observedProperty <property/waterTemperature> ] .
+
+<snippet/2026-01-02-humidity-1> a tss:Snippet ;
+  tss:points """[
+    { "id": "https://example.org/hum/0", "time": "2026-01-02T01:00:00Z", "value": 48 },
+    { "id": "https://example.org/hum/1", "time": "2026-01-02T04:00:00Z", "value": 51 },
+    { "id": "https://example.org/hum/2", "time": "2026-01-02T07:00:00Z", "value": 53 }
+  ]"""^^rdf:JSON ;
+  tss:from  "2026-01-02T00:00:00Z"^^xsd:dateTime ;
+  tss:until "2026-01-03T00:00:00Z"^^xsd:dateTime ;
+  tss:pointType sosa:Observation ;
+  tss:context """{
+    "@context": {
+      "id": "@id",
+      "time": { "@id": "http://www.w3.org/ns/sosa/resultTime", "@type": "http://www.w3.org/2001/XMLSchema#dateTime" },
+      "value": { "@id": "http://www.w3.org/ns/sosa/hasSimpleResult", "@type": "http://www.w3.org/2001/XMLSchema#integer" }
+    }
+  }"""^^rdf:JSON ;
+  tss:about [ a tss:PointTemplate ; sosa:madeBySensor <sensor/salinity_sensor_1> ; sosa:observedProperty <property/salinity> ] .
+
+<snippet/2026-01-03-ph-1> a tss:Snippet ;
+  tss:points """[
+    { "id": "https://example.org/ph/0", "time": "2026-01-03T02:15:00Z", "value": 7.12 },
+    { "id": "https://example.org/ph/1", "time": "2026-01-03T05:15:00Z", "value": 7.05 },
+    { "id": "https://example.org/ph/2", "time": "2026-01-03T08:15:00Z", "value": 6.98 },
+    { "id": "https://example.org/ph/3", "time": "2026-01-03T11:15:00Z", "value": 7.01 }
+  ]"""^^rdf:JSON ;
+  tss:from  "2026-01-03T00:00:00Z"^^xsd:dateTime ;
+  tss:until "2026-01-04T00:00:00Z"^^xsd:dateTime ;
+  tss:pointType sosa:Observation ;
+  tss:context """{
+    "@context": {
+      "id": "@id",
+      "time": { "@id": "http://www.w3.org/ns/sosa/resultTime", "@type": "http://www.w3.org/2001/XMLSchema#dateTime" },
+      "value": { "@id": "http://www.w3.org/ns/sosa/hasSimpleResult", "@type": "http://www.w3.org/2001/XMLSchema#decimal" }
+    }
+  }"""^^rdf:JSON ;
+  tss:about [ a tss:PointTemplate ; sosa:madeBySensor <sensor/ph_probe_1> ; sosa:observedProperty <property/waterPH> ] .
+
+<snippet/2026-01-04-cond-1> a tss:Snippet ;
+  tss:points """[
+    { "id": "https://example.org/cond/0", "time": "2026-01-04T00:30:00Z", "value": 120.5 },
+    { "id": "https://example.org/cond/1", "time": "2026-01-04T06:30:00Z", "value": 118.9 },
+    { "id": "https://example.org/cond/2", "time": "2026-01-04T12:30:00Z", "value": 121.3 }
+  ]"""^^rdf:JSON ;
+  tss:from  "2026-01-04T00:00:00Z"^^xsd:dateTime ;
+  tss:until "2026-01-05T00:00:00Z"^^xsd:dateTime ;
+  tss:pointType sosa:Observation ;
+  tss:context """{
+    "@context": {
+      "id": "@id",
+      "time": { "@id": "http://www.w3.org/ns/sosa/resultTime", "@type": "http://www.w3.org/2001/XMLSchema#dateTime" },
+      "value": { "@id": "http://www.w3.org/ns/sosa/hasSimpleResult", "@type": "http://www.w3.org/2001/XMLSchema#double" }
+    }
+  }"""^^rdf:JSON ;
+  tss:about [ a tss:PointTemplate ; sosa:madeBySensor <sensor/cond_sensor_1> ; sosa:observedProperty <property/conductivity> ] .
+
+<snippet/2026-01-05-press-1> a tss:Snippet ;
+  tss:points """[
+    { "id": "https://example.org/press/0", "time": "2026-01-05T03:00:00Z", "value": 101325 },
+    { "id": "https://example.org/press/1", "time": "2026-01-05T09:00:00Z", "value": 101300 },
+    { "id": "https://example.org/press/2", "time": "2026-01-05T15:00:00Z", "value": 101280 }
+  ]"""^^rdf:JSON ;
+  tss:from  "2026-01-05T00:00:00Z"^^xsd:dateTime ;
+  tss:until "2026-01-06T00:00:00Z"^^xsd:dateTime ;
+  tss:pointType sosa:Observation ;
+  tss:context """{
+    "@context": {
+      "id": "@id",
+      "time": { "@id": "http://www.w3.org/ns/sosa/resultTime", "@type": "http://www.w3.org/2001/XMLSchema#dateTime" },
+      "value": { "@id": "http://www.w3.org/ns/sosa/hasSimpleResult", "@type": "http://www.w3.org/2001/XMLSchema#integer" }
+    }
+  }"""^^rdf:JSON ;
+  tss:about [ a tss:PointTemplate ; sosa:madeBySensor <sensor/tds_sensor_1> ; sosa:observedProperty <property/totalDissolvedSolids> ] .
+
+<snippet/2026-01-06-light-1> a tss:Snippet ;
+  tss:points """[
+    { "id": "https://example.org/light/0", "time": "2026-01-06T05:30:00Z", "value": 120.0 },
+    { "id": "https://example.org/light/1", "time": "2026-01-06T12:30:00Z", "value": 850.5 },
+    { "id": "https://example.org/light/2", "time": "2026-01-06T18:30:00Z", "value": 200.2 }
+  ]"""^^rdf:JSON ;
+  tss:from  "2026-01-06T00:00:00Z"^^xsd:dateTime ;
+  tss:until "2026-01-07T00:00:00Z"^^xsd:dateTime ;
+  tss:pointType sosa:Observation ;
+  tss:context """{
+    "@context": {
+      "id": "@id",
+      "time": { "@id": "http://www.w3.org/ns/sosa/resultTime", "@type": "http://www.w3.org/2001/XMLSchema#dateTime" },
+      "value": { "@id": "http://www.w3.org/ns/sosa/hasSimpleResult", "@type": "http://www.w3.org/2001/XMLSchema#double" }
+    }
+  }"""^^rdf:JSON ;
+  tss:about [ a tss:PointTemplate ; sosa:madeBySensor <sensor/chlorophyll_sensor_1> ; sosa:observedProperty <property/chlorophyll> ] .
+
+<snippet/2026-01-07-motion-1> a tss:Snippet ;
+  tss:points """[
+    { "id": "https://example.org/motion/0", "time": "2026-01-07T00:05:00Z", "value": false },
+    { "id": "https://example.org/motion/1", "time": "2026-01-07T00:10:00Z", "value": true },
+    { "id": "https://example.org/motion/2", "time": "2026-01-07T00:15:00Z", "value": true }
+  ]"""^^rdf:JSON ;
+  tss:from  "2026-01-07T00:00:00Z"^^xsd:dateTime ;
+  tss:until "2026-01-08T00:00:00Z"^^xsd:dateTime ;
+  tss:pointType sosa:Observation ;
+  tss:context """{
+    "@context": {
+      "id": "@id",
+      "time": { "@id": "http://www.w3.org/ns/sosa/resultTime", "@type": "http://www.w3.org/2001/XMLSchema#dateTime" },
+      "value": { "@id": "http://www.w3.org/ns/sosa/hasSimpleResult", "@type": "http://www.w3.org/2001/XMLSchema#boolean" }
+    }
+  }"""^^rdf:JSON ;
+  tss:about [ a tss:PointTemplate ; sosa:madeBySensor <sensor/do_sensor_1> ; sosa:observedProperty <property/dissolvedOxygen> ] .
+
+<snippet/2026-01-08-co2-1> a tss:Snippet ;
+  tss:points """[
+    { "id": "https://example.org/co2/0", "time": "2026-01-08T09:00:00Z", "value": 415.2 },
+    { "id": "https://example.org/co2/1", "time": "2026-01-08T12:00:00Z", "value": 420.7 },
+    { "id": "https://example.org/co2/2", "time": "2026-01-08T15:00:00Z", "value": 418.0 }
+  ]"""^^rdf:JSON ;
+  tss:from  "2026-01-08T00:00:00Z"^^xsd:dateTime ;
+  tss:until "2026-01-09T00:00:00Z"^^xsd:dateTime ;
+  tss:pointType sosa:Observation ;
+  tss:context """{
+    "@context": {
+      "id": "@id",
+      "time": { "@id": "http://www.w3.org/ns/sosa/resultTime", "@type": "http://www.w3.org/2001/XMLSchema#dateTime" },
+      "value": { "@id": "http://www.w3.org/ns/sosa/hasSimpleResult", "@type": "http://www.w3.org/2001/XMLSchema#decimal" }
+    }
+  }"""^^rdf:JSON ;
+  tss:about [ a tss:PointTemplate ; sosa:madeBySensor <sensor/nitrate_sensor_1> ; sosa:observedProperty <property/nitrate> ] .
+
+<snippet/2026-01-09-noise-1> a tss:Snippet ;
+  tss:points """[
+    { "id": "https://example.org/noise/0", "time": "2026-01-09T10:00:00Z", "value": 35.2 },
+    { "id": "https://example.org/noise/1", "time": "2026-01-09T14:00:00Z", "value": 48.7 },
+    { "id": "https://example.org/noise/2", "time": "2026-01-09T18:00:00Z", "value": 41.0 }
+  ]"""^^rdf:JSON ;
+  tss:from  "2026-01-09T00:00:00Z"^^xsd:dateTime ;
+  tss:until "2026-01-10T00:00:00Z"^^xsd:dateTime ;
+  tss:pointType sosa:Observation ;
+  tss:context """{
+    "@context": {
+      "id": "@id",
+      "time": { "@id": "http://www.w3.org/ns/sosa/resultTime", "@type": "http://www.w3.org/2001/XMLSchema#dateTime" },
+      "value": { "@id": "http://www.w3.org/ns/sosa/hasSimpleResult", "@type": "http://www.w3.org/2001/XMLSchema#double" }
+    }
+  }"""^^rdf:JSON ;
+  tss:about [ a tss:PointTemplate ; sosa:madeBySensor <sensor/tss_sensor_1> ; sosa:observedProperty <property/totalSuspendedSolids> ] .
+
+<snippet/2026-01-10-turbidity-1> a tss:Snippet ;
+  tss:points """[
+    { "id": "https://example.org/turb/0", "time": "2026-01-10T02:00:00Z", "value": 2.1 },
+    { "id": "https://example.org/turb/1", "time": "2026-01-10T08:00:00Z", "value": 1.9 },
+    { "id": "https://example.org/turb/2", "time": "2026-01-10T14:00:00Z", "value": 2.4 }
+  ]"""^^rdf:JSON ;
+  tss:from  "2026-01-10T00:00:00Z"^^xsd:dateTime ;
+  tss:until "2026-01-11T00:00:00Z"^^xsd:dateTime ;
+  tss:pointType sosa:Observation ;
+  tss:context """{
+    "@context": {
+      "id": "@id",
+      "time": { "@id": "http://www.w3.org/ns/sosa/resultTime", "@type": "http://www.w3.org/2001/XMLSchema#dateTime" },
+      "value": { "@id": "http://www.w3.org/ns/sosa/hasSimpleResult", "@type": "http://www.w3.org/2001/XMLSchema#decimal" }
+    }
+  }"""^^rdf:JSON ;
+  tss:about [ a tss:PointTemplate ; sosa:madeBySensor <sensor/turbidity_sensor_1> ; sosa:observedProperty <property/turbidity> ] .
+
+<snippet/2026-01-11-flow-1> a tss:Snippet ;
+  tss:points """[
+    { "id": "https://example.org/flow/0", "time": "2026-01-11T01:00:00Z", "value": 0.45 },
+    { "id": "https://example.org/flow/1", "time": "2026-01-11T07:00:00Z", "value": 0.60 },
+    { "id": "https://example.org/flow/2", "time": "2026-01-11T13:00:00Z", "value": 0.55 }
+  ]"""^^rdf:JSON ;
+  tss:from  "2026-01-11T00:00:00Z"^^xsd:dateTime ;
+  tss:until "2026-01-12T00:00:00Z"^^xsd:dateTime ;
+  tss:pointType sosa:Observation ;
+  tss:context """{
+    "@context": {
+      "id": "@id",
+      "time": { "@id": "http://www.w3.org/ns/sosa/resultTime", "@type": "http://www.w3.org/2001/XMLSchema#dateTime" },
+      "value": { "@id": "http://www.w3.org/ns/sosa/hasSimpleResult", "@type": "http://www.w3.org/2001/XMLSchema#decimal" }
+    }
+  }"""^^rdf:JSON ;
+  tss:about [ a tss:PointTemplate ; sosa:madeBySensor <sensor/flow_sensor_1> ; sosa:observedProperty <property/flowRate> ] .
+
+<snippet/2026-01-12-level-1> a tss:Snippet ;
+  tss:points """[
+    { "id": "https://example.org/level/0", "time": "2026-01-12T04:00:00Z", "value": 1.12 },
+    { "id": "https://example.org/level/1", "time": "2026-01-12T10:00:00Z", "value": 1.15 },
+    { "id": "https://example.org/level/2", "time": "2026-01-12T16:00:00Z", "value": 1.10 }
+  ]"""^^rdf:JSON ;
+  tss:from  "2026-01-12T00:00:00Z"^^xsd:dateTime ;
+  tss:until "2026-01-13T00:00:00Z"^^xsd:dateTime ;
+  tss:pointType sosa:Observation ;
+  tss:context """{
+    "@context": {
+      "id": "@id",
+      "time": { "@id": "http://www.w3.org/ns/sosa/resultTime", "@type": "http://www.w3.org/2001/XMLSchema#dateTime" },
+      "value": { "@id": "http://www.w3.org/ns/sosa/hasSimpleResult", "@type": "http://www.w3.org/2001/XMLSchema#double" }
+    }
+  }"""^^rdf:JSON ;
+  tss:about [ a tss:PointTemplate ; sosa:madeBySensor <sensor/level_sensor_1> ; sosa:observedProperty <property/waterLevel> ] .
+
+<snippet/2026-01-13-batt-1> a tss:Snippet ;
+  tss:points """[
+    { "id": "https://example.org/batt/0", "time": "2026-01-13T00:00:00Z", "value": 3.98 },
+    { "id": "https://example.org/batt/1", "time": "2026-01-13T12:00:00Z", "value": 3.95 },
+    { "id": "https://example.org/batt/2", "time": "2026-01-13T23:59:59Z", "value": 3.92 }
+  ]"""^^rdf:JSON ;
+  tss:from  "2026-01-13T00:00:00Z"^^xsd:dateTime ;
+  tss:until "2026-01-14T00:00:00Z"^^xsd:dateTime ;
+  tss:pointType sosa:Observation ;
+  tss:context """{
+    "@context": {
+      "id": "@id",
+      "time": { "@id": "http://www.w3.org/ns/sosa/resultTime", "@type": "http://www.w3.org/2001/XMLSchema#dateTime" },
+      "value": { "@id": "http://www.w3.org/ns/sosa/hasSimpleResult", "@type": "http://www.w3.org/2001/XMLSchema#decimal" }
+    }
+  }"""^^rdf:JSON ;
+  tss:about [ a tss:PointTemplate ; sosa:madeBySensor <sensor/cod_sensor_1> ; sosa:observedProperty <property/chemicalOxygenDemand> ] .
+
+<snippet/2026-01-14-orp-1> a tss:Snippet ;
+  tss:points """[
+    { "id": "https://example.org/orp/0", "time": "2026-01-14T03:30:00Z", "value": 250 },
+    { "id": "https://example.org/orp/1", "time": "2026-01-14T09:30:00Z", "value": 245 },
+    { "id": "https://example.org/orp/2", "time": "2026-01-14T15:30:00Z", "value": 248 }
+  ]"""^^rdf:JSON ;
+  tss:from  "2026-01-14T00:00:00Z"^^xsd:dateTime ;
+  tss:until "2026-01-15T00:00:00Z"^^xsd:dateTime ;
+  tss:pointType sosa:Observation ;
+  tss:context """{
+    "@context": {
+      "id": "@id",
+      "time": { "@id": "http://www.w3.org/ns/sosa/resultTime", "@type": "http://www.w3.org/2001/XMLSchema#dateTime" },
+      "value": { "@id": "http://www.w3.org/ns/sosa/hasSimpleResult", "@type": "http://www.w3.org/2001/XMLSchema#integer" }
+    }
+  }"""^^rdf:JSON ;
+  tss:about [ a tss:PointTemplate ; sosa:madeBySensor <sensor/orp_sensor_1> ; sosa:observedProperty <property/oxidationReductionPotential> ] .
+
+<snippet/2026-01-15-custom-1> a tss:Snippet ;
+  tss:points """[
+    { "id": "https://example.org/custom/0", "time": "2026-01-15T06:00:00Z", "value": 1 },
+    { "id": "https://example.org/custom/1", "time": "2026-01-15T12:00:00Z", "value": 0 },
+    { "id": "https://example.org/custom/2", "time": "2026-01-15T18:00:00Z", "value": 1 }
+  ]"""^^rdf:JSON ;
+  tss:from  "2026-01-15T00:00:00Z"^^xsd:dateTime ;
+  tss:until "2026-01-16T00:00:00Z"^^xsd:dateTime ;
+  tss:pointType sosa:Observation ;
+  tss:context """{
+    "@context": {
+      "id": "@id",
+      "time": { "@id": "http://www.w3.org/ns/sosa/resultTime", "@type": "http://www.w3.org/2001/XMLSchema#dateTime" },
+      "value": { "@id": "http://example.org/customValue", "@type": "http://www.w3.org/2001/XMLSchema#integer" }
+    }
+  }"""^^rdf:JSON ;
+  tss:about [ a tss:PointTemplate ; sosa:madeBySensor <sensor/toc_sensor_1> ; sosa:observedProperty <property/totalOrganicCarbon> ] .
