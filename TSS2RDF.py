@@ -107,10 +107,15 @@ def SaveGraph(directory,final_graph):
     print('File written successfully')
 
 def main():
+    parser = argparse.ArgumentParser(description='Process sensor graph files.')
+    parser.add_argument('-i', '--input', required=True, help='Input Turtle file path')
+    parser.add_argument('-o', '--output', required=True, help='Output Turtle file path')
+    args = parser.parse_args()
+
     print("Program started!")
-    Original_graph  = LoadGraph('sampleTSS.ttl')
+    Original_graph  = LoadGraph(args.input)
     Final_graph = CreateRDF(Original_graph)
-    SaveGraph('generated_TSS2RDF.ttl',Final_graph)
+    SaveGraph(args.output,Final_graph)
 
 if __name__ == "__main__":
     main()    
