@@ -121,17 +121,17 @@
     sosa:observedProperty <https://example.org/property/chlorophyll> ;
     sosa:resultTime "2026-01-06T18:30:00+00:00"^^xsd:dateTime .
 
-<https://example.org/motion/0> sosa:hasSimpleResult "false"^^xsd:decimal ;
+<https://example.org/motion/0> sosa:hasSimpleResult 0.0 ;
     sosa:madeBySensor <https://example.org/sensor/do_sensor_1> ;
     sosa:observedProperty <https://example.org/property/dissolvedOxygen> ;
     sosa:resultTime "2026-01-07T00:05:00+00:00"^^xsd:dateTime .
 
-<https://example.org/motion/1> sosa:hasSimpleResult "true"^^xsd:decimal ;
+<https://example.org/motion/1> sosa:hasSimpleResult 1.0 ;
     sosa:madeBySensor <https://example.org/sensor/do_sensor_1> ;
     sosa:observedProperty <https://example.org/property/dissolvedOxygen> ;
     sosa:resultTime "2026-01-07T00:10:00+00:00"^^xsd:dateTime .
 
-<https://example.org/motion/2> sosa:hasSimpleResult "true"^^xsd:decimal ;
+<https://example.org/motion/2> sosa:hasSimpleResult 1.0 ;
     sosa:madeBySensor <https://example.org/sensor/do_sensor_1> ;
     sosa:observedProperty <https://example.org/property/dissolvedOxygen> ;
     sosa:resultTime "2026-01-07T00:15:00+00:00"^^xsd:dateTime .
