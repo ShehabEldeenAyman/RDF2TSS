@@ -79,7 +79,7 @@ def CreateRDF(graph):
                     json_id = URIRef(json_id)
 
                     snippet_id_dic[json_id] = subj  #the dictionary is mapped in reverse because json_id is unique, subject is not.
-
+                    final_graph.add((json_id,URIRef("http://www.w3.org/1999/02/22-rdf-syntax-ns#type"),URIRef("http://www.w3.org/ns/sosa/Observation")))
                     final_graph.add((json_id,URIRef("http://www.w3.org/ns/sosa/resultTime"),json_time))
                     final_graph.add((json_id,URIRef("http://www.w3.org/ns/sosa/hasSimpleResult"),json_value))
 
