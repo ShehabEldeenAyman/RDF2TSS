@@ -52,15 +52,20 @@ def CreateTSS(sensor_set, graph):
         tss_query = f'''
         PREFIX sosa: <http://www.w3.org/ns/sosa/>
 
-        SELECT ?READING ?TIME ?OBSERVATION ?observedProperty
+                SELECT ?day
+            (GROUP_CONCAT(?READING; SEPARATOR=",") AS ?readings)
+            (COUNT(?OBSERVATION) AS ?count)
         WHERE {{
-            ?OBSERVATION a sosa:Observation ;
-                         sosa:resultTime ?TIME ;
-                         sosa:hasSimpleResult ?READING ;
-                         sosa:observedProperty ?observedProperty ;
-                         sosa:madeBySensor {sensor_token} .
+        ?OBSERVATION a sosa:Observation ;
+                    sosa:resultTime ?TIME ;
+                    sosa:hasSimpleResult ?READING ;
+                    sosa:observedProperty ?observedProperty ;
+                    sosa:madeBySensor {sensor_token} .
+
+        BIND(xsd:date(?TIME) AS ?day)
         }}
-        ORDER BY ?TIME
+        GROUP BY ?day
+        ORDER BY ?day
         '''
         results = graph.query(tss_query)
         for row in results:

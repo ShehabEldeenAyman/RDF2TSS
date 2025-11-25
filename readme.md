@@ -1,6 +1,3 @@
-Certainly! Here's a concise README documentation for your script explaining how it transforms RDF data into time series snippets:
-
----
 
 # RDF to Time Series Snippets Converter
 
