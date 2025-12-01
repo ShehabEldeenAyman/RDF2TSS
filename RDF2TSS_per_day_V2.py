@@ -36,6 +36,7 @@ def CreateTSS(sensor_set, graph):
     prefix_tss = Namespace('https://w3id.org/tss#')
     prefix_ex  = Namespace('http://example.org/')
     prefix_sosa = Namespace('http://www.w3.org/ns/sosa/')
+    base_snippet_ns = Namespace("https://example.org/tss/snippet/")
 
     final_graph = Graph()
     final_graph.bind('tss', prefix_tss)
@@ -97,9 +98,20 @@ def CreateTSS(sensor_set, graph):
             json_object = json.dumps(tss_points)
 
             # Create nodes
-            snippet = BNode()
+            #snippet = BNode() #this should be changed. 
             template = BNode()
 
+############replacing blank node snippet############
+            first_obs = str(rows[0].OBSERVATION)
+            first_time = str(rows[0].TIME)
+            # Sanitize time for URI use
+            safe_time = first_time.replace(":", "").replace("-", "").replace("T", "").replace("Z", "")
+            # Example: "2025-08-18T00:00:00" → "20250818000000"
+            # Sanitize observation ID
+            safe_obs = first_obs.replace(":", "%3A").replace("/", "%2F")
+            # Final snippet URI
+            snippet = URIRef(base_snippet_ns[f"{safe_id}_{safe_time}"])
+########################
             # Add Snippet
             final_graph.add((snippet, RDF.type, prefix_tss.Snippet))
             final_graph.add((snippet, prefix_tss.points, Literal(json_object)))
